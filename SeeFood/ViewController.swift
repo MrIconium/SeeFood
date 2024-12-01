@@ -43,6 +43,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("Loading CoreML Model Failed")
+            
+            
         }
         
         let request = VNCoreMLRequest(model: model) { request, error in
